@@ -68,31 +68,31 @@ export function Services() {
   return (
     <main className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+      <section className="bg-gradient-to-br from-gray-800 to-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h1 className="text-5xl font-extrabold text-white mb-6">Our Services</h1>
+          <p className="text-xl text-teal-200 max-w-2xl mx-auto">
             Comprehensive web solutions tailored to your business needs.
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-md transition-shadow"
+                className="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 p-8 hover:shadow-2xl transition-shadow transform hover:-translate-y-1"
               >
-                <service.icon className="w-12 h-12 text-blue-600 mb-6" />
-                <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-3">
+                <service.icon className="w-14 h-14 text-teal-400 mb-6" />
+                <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                <ul className="space-y-4">
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-gray-600">
-                      <ArrowRight size={16} className="text-blue-600 mr-2" />
+                    <li key={feature} className="flex items-center text-gray-300">
+                      <ArrowRight size={16} className="text-teal-400 mr-3" />
                       {feature}
                     </li>
                   ))}
@@ -104,15 +104,15 @@ export function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 py-20">
+      <section className="bg-gradient-to-r from-blue-900 to-orange-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-extrabold text-white mb-6">
             Ready to Transform Your Digital Presence?
           </h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-teal-200 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help you achieve your business goals with our comprehensive web solutions.
           </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors">
+          <button className="bg-white text-blue-900 px-8 py-4 rounded-full font-medium hover:bg-blue-800 hover:shadow-md transition-all">
             Get Started
           </button>
         </div>

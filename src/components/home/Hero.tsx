@@ -9,7 +9,7 @@ export function Hero() {
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Empowering Your
-            <span className="text-blue-600"> Online Presence</span>
+            <span className="text-[#FF033E]"> Online Presence</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             We craft beautiful, responsive websites that drive results and help your business grow in the digital world.

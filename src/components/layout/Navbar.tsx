@@ -14,10 +14,10 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+    <nav className="fixed top-0 w-full bg-black backdrop-blur-sm z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <Link to="/" className="text-2xl font-bold text-blue-600">WebCraft</Link>
+          <Link to="/" className="font-medium text-2xl  text-blue-400 ">NEXORA</Link>
           
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
@@ -26,8 +26,8 @@ export function Navbar() {
                 to={item.path}
                 className={`${
                   location.pathname === item.path
-                    ? 'text-blue-600'
-                    : 'text-gray-600 hover:text-blue-500'
+                    ? 'text-blue-600 rounded-xl p-5 text-2xl'
+                    : 'text-gray-50 hover:text-blue-500 p-5 '
                 } transition-colors duration-200`}
               >
                 {item.label}

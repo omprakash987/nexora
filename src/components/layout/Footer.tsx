@@ -7,7 +7,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">WebCraft</h3>
+            <h3 className="text-xl font-bold mb-4">NEXORA</h3>
             <p className="text-gray-400">
               Empowering your online presence with cutting-edge web solutions.
             </p>
@@ -18,15 +18,15 @@ export function Footer() {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <Mail size={18} />
-                <span>contact@webcraft.com</span>
+                <span>nexora32@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={18} />
-                <span>+1 (555) 123-4567</span>
+                <span>9354103789</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin size={18} />
-                <span>123 Web Street, Digital City</span>
+                <span>New delhi , India</span>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} WebCraft. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NEXORA. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,0 +1,18 @@
+
+@import "tailwindcss";
+
+
+
+body {
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(0, 0, 0, 0.05),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(0, 0, 0, 0.05),
+      transparent 40%
+    ),
+    #ffffff;
+}

@@ -121,7 +121,7 @@ const Hero = () => {
                 }}
               >
                 <img
-                  src="/daksh.jpeg"
+                  src="/daksh2.jpeg"
                   className="w-80 h-96 object-cover rounded-3xl border-4 border-black shadow-2xl"
                 />
               </div>

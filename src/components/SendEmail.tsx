@@ -48,7 +48,7 @@ const SendEmail = ({ quote }: SendEmailProps) => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/email/sendEmail",
+        "https://nexoradevs.vercel.app/api/email/sendEmail",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

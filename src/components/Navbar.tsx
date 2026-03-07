@@ -21,9 +21,7 @@ const Navbar: React.FC = () => {
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -32,23 +30,24 @@ const Navbar: React.FC = () => {
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="w-full pt-6 px-6">
-        <div className="max-w-7xl mx-auto border border-dashed border-gray-400 rounded-3xl p-2">
-          <div className="bg-[#f3f3f3] rounded-2xl px-10 py-5 flex items-center justify-between">
+      <div className="w-full pt-4 md:pt-6 px-4 md:px-6">
+        <div className="max-w-7xl mx-auto border border-dashed border-gray-400 rounded-2xl md:rounded-3xl p-1 md:p-2">
+          
+          <div className="bg-[#f3f3f3] rounded-xl md:rounded-2xl px-4 sm:px-6 md:px-10 py-3 md:py-5 flex items-center justify-between">
 
             {/* Logo */}
             <div
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              <div className="w-8 h-8 border-2 border-orange-500 rounded-md rotate-12"></div>
-              <span className="text-xl font-bold tracking-tight">
+              <div className="w-6 h-6 md:w-8 md:h-8 border-2 border-orange-500 rounded-md rotate-12"></div>
+              <span className="text-lg md:text-xl font-bold tracking-tight">
                 Nexora
               </span>
             </div>
 
             {/* Nav Links */}
-            <div className="hidden md:flex items-center gap-10 text-gray-700 font-medium">
+            <div className="hidden md:flex items-center gap-6 lg:gap-10 text-gray-700 font-medium text-sm lg:text-base">
 
               <button
                 onClick={() => scrollToSection("reviews")}
@@ -64,10 +63,15 @@ const Navbar: React.FC = () => {
                 FAQs
               </button>
 
-              {/* Clean Schedule Button */}
               <SendEmail quote="Schedule a demo ›" />
 
             </div>
+
+            {/* Mobile Button */}
+            <div className="md:hidden">
+              <SendEmail quote="Demo" />
+            </div>
+
           </div>
         </div>
       </div>

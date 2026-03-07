@@ -1,38 +1,50 @@
 const BuildSection = () => {
   return (
-    <section className="py-28 px-6 bg-[#f5f5f5]">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 bg-[#f5f5f5]">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
 
-        
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+        {/* LEFT CONTENT */}
+        <div className="text-center md:text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Build Your <span className="text-[#F24E2E]">Own</span> Brand
           </h2>
 
-          <p className="mt-6 text-lg text-gray-600 max-w-lg">
+          <p className="mt-4 md:mt-6 text-base sm:text-lg text-gray-600 max-w-lg mx-auto md:mx-0">
             Turn your audience into a thriving community without any coding
             skills, with a digital platform that's unique
           </p>
 
-          <button className="mt-8 bg-[#F24E2E] hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 transition">
+          <button className="mt-6 md:mt-8 bg-[#F24E2E] hover:bg-orange-600 text-white 
+          px-6 sm:px-8 py-3 sm:py-4 
+          rounded-full text-base sm:text-lg font-semibold 
+          flex items-center gap-2 transition mx-auto md:mx-0">
             Get Started
             <span className="text-xl">›</span>
           </button>
         </div>
 
-         
-        <div className="relative bg-white rounded-3xl p-6 shadow-lg">
+        {/* RIGHT CONTENT */}
+        <div className="relative bg-white rounded-2xl md:rounded-3xl p-4 sm:p-6 shadow-lg">
 
-          
-          <div className="absolute left-6 top-6 w-44 h-72 rounded-2xl bg-linear-to-b from-red-500 to-purple-600"></div>
+          {/* gradient card */}
+          <div className="absolute 
+          left-4 sm:left-6 
+          top-4 sm:top-6 
+          w-32 sm:w-40 md:w-44 
+          h-52 sm:h-64 md:h-72 
+          rounded-2xl 
+          bg-gradient-to-b from-red-500 to-purple-600">
+          </div>
 
-           
-          <div className="ml-28 border-2 border-orange-400 rounded-2xl overflow-hidden">
+          {/* video container */}
+          <div className="ml-20 sm:ml-24 md:ml-28 border-2 border-orange-400 rounded-2xl overflow-hidden">
 
             <video
-              src="/demo.mp4"    
+              src="/demo.mp4"
               controls
-              className="w-full h-64 object-cover rounded-2xl"
+              className="w-full 
+              h-48 sm:h-56 md:h-64 
+              object-cover rounded-2xl"
             />
 
           </div>

@@ -8,19 +8,20 @@ const app = express();
 const __dirname = path.resolve()
 
 dotenv.config(); 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+
+const corsOptions = {
+    origin: 'http://localhost:3000', 
+    credentials: true, 
+};
+app.use(cors(corsOptions))
+
 app.use(express.json({limit:"5mb"})); 
 app.use(express.urlencoded({extended:true})); 
 
 app.use('/api/email',emailRoutes); 
 app.use(express.static(path.join(__dirname,"/dist")))
 
-app.get("/{*any}",(req,res)=>{
+app.get("*",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"frontend","dist","index.html")); 
 })
 

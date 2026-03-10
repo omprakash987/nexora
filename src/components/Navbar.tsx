@@ -40,8 +40,9 @@ const Navbar: React.FC = () => {
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              <div className="w-6 h-6 md:w-8 md:h-8 border-2 border-orange-500 rounded-md rotate-12"></div>
-              <span className="text-lg md:text-xl font-bold tracking-tight">
+              {/* <div className="w-6 h-6 md:w-8 md:h-8 border-2 border-orange-500 rounded-md rotate-12"></div> */}
+              <img className="w-12 h-12 md:w-8 md:h-8 border-2   rounded-md  " src="/nexoralogo.png" alt="nexoralogo" />
+              <span className="text-lg md:text-4xl font-bold tracking-tight">
                 Nexora
               </span>
             </div>

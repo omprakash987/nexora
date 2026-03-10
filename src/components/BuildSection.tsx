@@ -14,13 +14,13 @@ const BuildSection = () => {
             skills, with a digital platform that's unique
           </p>
 
-          <button className="mt-6 md:mt-8 bg-[#F24E2E] hover:bg-orange-600 text-white 
+          <SendEmail quote=" Get Started" className="mt-6 md:mt-8 bg-[#F24E2E] hover:bg-orange-600 text-white 
           px-6 sm:px-8 py-3 sm:py-4 
           rounded-full text-base sm:text-lg font-semibold 
-          flex items-center gap-2 transition mx-auto md:mx-0">
-            Get Started
-            <span className="text-xl">›</span>
-          </button>
+          flex items-center gap-2 transition mx-auto md:mx-0 cursor-pointer"
+           
+             
+          />
         </div>
 
         {/* RIGHT CONTENT */}
@@ -40,7 +40,7 @@ const BuildSection = () => {
           <div className="ml-20 sm:ml-24 md:ml-28 border-2 border-orange-400 rounded-2xl overflow-hidden">
 
             <video
-              src="/demo.mp4"
+              src="/nexoravideo.mp4"
               controls
               className="w-full 
               h-48 sm:h-56 md:h-64 

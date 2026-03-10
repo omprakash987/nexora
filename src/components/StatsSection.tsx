@@ -3,11 +3,11 @@
 import { motion } from "framer-motion"
 
 const stats = [
-  { number: "10000+", label: "Creators" },
-  { number: "150+", label: "Countries served" },
-  { number: "6 Crores+", label: "User signups" },
-  { number: "10 Lakhs+", label: "Live streams per year" },
-  { number: "₹1000 Crores+", label: "Earned by creators" },
+  { number: "100+", label: "Creators" },
+  { number: "15+", label: "Countries served" },
+  { number: "60k+", label: "User signups" },
+  { number: "10k+", label: "Live streams per year" },
+  { number: "₹10 lakshs+", label: "Earned by creators" },
 ]
 
 export default function StatsSection() {

@@ -16,7 +16,7 @@ import BrandingServices from "./pages/Brand-service";
 
 function HomePage() {
   return (
-    <>
+    <div className="overflow-auto">
       <Hero />
       <BuildSection />
       <RevenueSection />
@@ -25,7 +25,7 @@ function HomePage() {
       <TestimonialsSection />
       <FaqSection />
       <CtaSection />
-    </>
+   </div>
   );
 }
 

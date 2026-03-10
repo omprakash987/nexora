@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
                 FAQs
               </button>
 
-              <SendEmail quote="Schedule a demo ›" />
+              <SendEmail quote="Schedule a demo ›" className="bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 rounded-full font-semibold transition cursor-pointer" />
 
             </div>
 

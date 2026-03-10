@@ -1,3 +1,5 @@
+import SendEmail from "./SendEmail";
+
 const BuildSection = () => {
   return (
     <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 bg-[#f5f5f5]">
@@ -5,9 +7,7 @@ const BuildSection = () => {
 
         {/* LEFT CONTENT */}
         <div className="text-center md:text-left">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            Build Your <span className="text-[#F24E2E]">Own</span> Brand
-          </h2>
+          <SendEmail quote="Get started" className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight" />
 
           <p className="mt-4 md:mt-6 text-base sm:text-lg text-gray-600 max-w-lg mx-auto md:mx-0">
             Turn your audience into a thriving community without any coding

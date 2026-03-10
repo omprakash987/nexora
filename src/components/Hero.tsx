@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import SendEmail from "./SendEmail";
 
 const Hero = () => {
   const [smoothProgress, setSmoothProgress] = useState(0);
@@ -17,7 +18,7 @@ const Hero = () => {
     const animate = () => {
       setSmoothProgress(prev => {
         const diff = targetProgress.current - prev;
-        return prev + diff * 0.07;  
+        return prev + diff * 0.07;
       });
 
       animationRef.current = requestAnimationFrame(animate);
@@ -27,156 +28,171 @@ const Hero = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      cancelAnimationFrame(animationRef.current!);
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, []);
 
-  const spread = smoothProgress * 280;    
+  const spread = smoothProgress * 280;
   const leftRotate = -5 - smoothProgress * 35;
   const rightRotate = 5 + smoothProgress * 35;
   const centerScale = 1 + smoothProgress * 0.08;
 
   return (
-   <section className="px-4 sm:px-6 lg:px-8 mt-32 md:mt-40 lg:mt-50">
-  <div className="max-w-6xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden">
+    <section className="px-4 sm:px-6 lg:px-8 mt-28 md:mt-32 lg:mt-36">
+      <div className="max-w-6xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden">
 
-    <div className="relative bg-[#F24E2E] rounded-2xl md:rounded-3xl 
-    pt-24 md:pt-32 lg:pt-36 
-    pb-36 md:pb-44 lg:pb-52 
-    px-6 md:px-10 text-center overflow-hidden">
+        <div
+          className="relative bg-[#F24E2E] rounded-2xl md:rounded-3xl
+          pt-16 md:pt-20 lg:pt-24
+          pb-20 md:pb-24 lg:pb-28
+          px-6 md:px-10 text-center overflow-hidden"
+        >
 
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px)
-          `,
-          backgroundSize: "60px 60px",
-        }}
-      />
+          {/* Grid Background */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage: `
+                linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px)
+              `,
+              backgroundSize: "60px 60px",
+            }}
+          />
 
-      <div className="relative z-10">
+          <div className="relative z-10">
 
-        {/* Heading */}
-        <h1 className="text-white 
-        text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
-        font-bold leading-tight">
+            {/* Heading */}
+            <h1
+              className="text-white
+              text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+              font-extrabold leading-[1.1] tracking-tight"
+            >
+              AI Powered <br />
+              Websites & Apps <br />
+              for growing startups
+            </h1>
 
-          AI Powered <br />
-          Websites & Apps <br />
-          for growing startups
-        </h1>
+            {/* Subtitle */}
+            <p
+              className="text-white
+              text-lg sm:text-xl md:text-2xl lg:text-3xl
+              mt-4 md:mt-6 font-semibold"
+            >
+              Earn via{" "}
+              <span className="bg-white text-black px-3 py-1 rounded-full text-sm md:text-lg">
+                ₹
+              </span>{" "}
+              Marketing
+            </p>
 
-        {/* Subtitle */}
-        <p className="text-white 
-        text-lg sm:text-xl md:text-2xl 
-        mt-4 md:mt-6 font-semibold">
+            {/* Buttons */}
+            <div className="mt-8 md:mt-10 flex justify-center gap-4 md:gap-6 flex-wrap">
 
-          Earn via{" "}
-          <span className="bg-white text-black px-3 py-1 rounded-full text-sm md:text-lg">
-            ₹
-          </span>{" "}
-          Me
-        </p>
+              <SendEmail
+                quote="Get Started"
+                className="bg-white px-6 md:px-8 py-3 md:py-4 rounded-full
+                font-semibold text-base md:text-lg
+                shadow-[0_6px_0px_#000] cursor-pointer"
+              />
 
-        {/* Buttons */}
-        <div className="mt-8 md:mt-10 flex justify-center gap-4 md:gap-6 flex-wrap">
+              <button
+                className="bg-white
+                px-6 md:px-8
+                py-3 md:py-4
+                rounded-full
+                font-semibold
+                text-base md:text-lg
+                shadow-[0_6px_0px_#000] cursor-pointer"
+                onClick={() =>
+                  document
+                    .getElementById("services")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Learn More
+              </button>
 
-          <button className="bg-white 
-          px-6 md:px-8 
-          py-3 md:py-4 
-          rounded-full 
-          font-semibold 
-          text-base md:text-lg 
-          shadow-[0_6px_0px_#000]">
+            </div>
 
-            Get Started
-          </button>
+            {/* Image Stack */}
+            <div
+              className="
+              mt-16 sm:mt-20 md:mt-24 lg:mt-28
+              relative
+              h-[320px] sm:h-[360px] md:h-[420px] lg:h-[420px]
+              flex justify-center items-end"
+            >
 
-          <button className="bg-white 
-          px-6 md:px-8 
-          py-3 md:py-4 
-          rounded-full 
-          font-semibold 
-          text-base md:text-lg 
-          shadow-[0_6px_0px_#000]">
+              {/* LEFT IMAGE */}
+              <div
+                className="absolute"
+                style={{
+                  transform: `
+                    translateX(-${spread}px)
+                    rotate(${leftRotate}deg)
+                  `,
+                }}
+              >
+                {/*
+                <img
+                  src="/om.jpeg"
+                  className="
+                  w-40 sm:w-52 md:w-64 lg:w-72
+                  h-60 sm:h-72 md:h-88 lg:h-96
+                  object-cover rounded-3xl
+                  border-4 border-black shadow-2xl"
+                />
+                */}
+              </div>
 
-            Learn More
-          </button>
+              {/* RIGHT IMAGE */}
+              <div
+                className="absolute"
+                style={{
+                  transform: `
+                    translateX(${spread}px)
+                    rotate(${rightRotate}deg)
+                  `,
+                }}
+              >
+                {/*
+                <img
+                  src="/rishu.jpeg"
+                  className="
+                  w-40 sm:w-52 md:w-64 lg:w-72
+                  h-60 sm:h-72 md:h-88 lg:h-96
+                  object-cover rounded-3xl
+                  border-4 border-black shadow-2xl"
+                />
+                */}
+              </div>
 
+              {/* CENTER IMAGE */}
+              <div
+                className="absolute z-10"
+                style={{
+                  transform: `scale(${centerScale})`,
+                }}
+              >
+                {/*
+                <img
+                  src="/daksh2.jpeg"
+                  className="
+                  w-48 sm:w-60 md:w-72 lg:w-80
+                  h-64 sm:h-80 md:h-96
+                  object-cover rounded-3xl
+                  border-4 border-black shadow-2xl"
+                />
+                */}
+              </div>
+
+            </div>
+
+          </div>
         </div>
-
-        {/* Image Stack */}
-        <div className="
-        mt-28 sm:mt-36 md:mt-44 lg:mt-52 
-        relative 
-        h-[320px] sm:h-[360px] md:h-[420px] lg:h-[420px] 
-        flex justify-center items-end">
-
-          {/* LEFT */}
-          <div
-            className="absolute"
-            style={{
-              transform: `
-                translateX(-${spread}px)
-                rotate(${leftRotate}deg)
-              `
-            }}
-          >
-            <img
-              src="/om.jpeg"
-              className="
-              w-40 sm:w-52 md:w-64 lg:w-72
-              h-60 sm:h-72 md:h-88 lg:h-96
-              object-cover rounded-3xl 
-              border-4 border-black shadow-2xl"
-            />
-          </div>
-
-          {/* RIGHT */}
-          <div
-            className="absolute"
-            style={{
-              transform: `
-                translateX(${spread}px)
-                rotate(${rightRotate}deg)
-              `
-            }}
-          >
-            <img
-              src="/rishu.jpeg"
-              className="
-              w-40 sm:w-52 md:w-64 lg:w-72
-              h-60 sm:h-72 md:h-88 lg:h-96
-              object-cover rounded-3xl 
-              border-4 border-black shadow-2xl"
-            />
-          </div>
-
-          {/* CENTER */}
-          <div
-            className="absolute z-10"
-            style={{
-              transform: `scale(${centerScale})`
-            }}
-          >
-            <img
-              src="/daksh2.jpeg"
-              className="
-              w-48 sm:w-60 md:w-72 lg:w-80
-              h-64 sm:h-80 md:h-96
-              object-cover rounded-3xl 
-              border-4 border-black shadow-2xl"
-            />
-          </div>
-
-        </div>
-
       </div>
-    </div>
-  </div>
-</section>
+    </section>
   );
 };
 

@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 
 interface SendEmailProps {
   quote: string;
+  className?: string;
 }
 
 interface FormData {
@@ -12,7 +13,7 @@ interface FormData {
   description: string;
 }
 
-const SendEmail = ({ quote }: SendEmailProps) => {
+const SendEmail = ({ quote,className }: SendEmailProps) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -82,7 +83,7 @@ const SendEmail = ({ quote }: SendEmailProps) => {
       {/* Trigger Button */}
       <button
         onClick={handleDialogToggle}
-        className="bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 rounded-full font-semibold transition cursor-pointer"
+        className={className}
       >
         {quote}
       </button>

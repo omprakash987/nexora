@@ -1,4 +1,3 @@
-import { Linkedin, Instagram, Youtube } from "lucide-react"
 
 const Footer: React.FC = () => {
   return (

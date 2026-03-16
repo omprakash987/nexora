@@ -26,13 +26,14 @@ const Navbar: React.FC = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 ${
-        showNavbar ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 ${showNavbar ? "translate-y-0" : "-translate-y-full"
+        }`}
     >
       <div className="w-full pt-4 md:pt-6 px-4 md:px-6">
-        <div className="max-w-7xl mx-auto border border-dashed border-gray-400 rounded-2xl md:rounded-3xl p-1 md:p-2">
-          
+
+        {/* Increased Width */}
+        <div className="max-w-[1600px] mx-auto border border-dashed border-gray-400 rounded-2xl md:rounded-3xl p-1 md:p-2">
+
           <div className="bg-[#f3f3f3] rounded-xl md:rounded-2xl px-4 sm:px-6 md:px-10 py-3 md:py-5 flex items-center justify-between">
 
             {/* Logo */}
@@ -40,9 +41,12 @@ const Navbar: React.FC = () => {
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
-              {/* <div className="w-6 h-6 md:w-8 md:h-8 border-2 border-orange-500 rounded-md rotate-12"></div> */}
-              <img className="w-12 h-12 md:w-8 md:h-8 border-2   rounded-md  " src="/nexoralogo.png" alt="nexoralogo" />
-              <span className="text-lg md:text-4xl font-bold tracking-tight">
+              <img
+                className="w-8 h-8 md:w-10 md:h-10 border-2 rounded-md"
+                src="/nexoralogo.png"
+                alt="nexoralogo"
+              />
+              <span className="text-lg md:text-3xl font-bold tracking-tight">
                 Nexora
               </span>
             </div>
@@ -64,7 +68,10 @@ const Navbar: React.FC = () => {
                 FAQs
               </button>
 
-              <SendEmail quote="Schedule a demo ›" className="bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 rounded-full font-semibold transition cursor-pointer" />
+              <SendEmail
+                quote="Schedule a demo ›"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 rounded-full font-semibold transition cursor-pointer"
+              />
 
             </div>
 

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center gap-2 font-bold text-xl">
           <span className="text-orange-500">Nexora</span>
-           
+
         </div>
 
         {/* Nav Links */}
@@ -31,15 +31,15 @@ const Footer: React.FC = () => {
           {/* Address + Copyright */}
           <div className="text-gray-600 text-sm space-y-2">
             <p>© 2024 Nexora. All rights reserved</p>
-            <p>
+            {/* <p>
               Address: Priska Pride Tower, A-42/4, 7th Floor, Block-A,
               Sector 62, Noida, Uttar Pradesh - 201301
-            </p>
-            <p>Ph. No: +91 7206392937</p>
+            </p> */}
+            <p>Ph. No: +91 9354103871</p>
           </div>
 
           {/* Social Icons */}
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <SocialIcon>
               <Linkedin size={18} />
             </SocialIcon>
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
             <SocialIcon>
               <Youtube size={18} />
             </SocialIcon>
-          </div>
+          </div> */}
 
         </div>
       </div>
@@ -58,16 +58,16 @@ const Footer: React.FC = () => {
   )
 }
 
-type SocialIconProps = {
-  children: React.ReactNode
-}
+// type SocialIconProps = {
+//   children: React.ReactNode
+// }
 
-const SocialIcon: React.FC<SocialIconProps> = ({ children }) => {
-  return (
-    <div className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition cursor-pointer">
-      {children}
-    </div>
-  )
-}
+// const SocialIcon: React.FC<SocialIconProps> = ({ children }) => {
+//   return (
+//     <div className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition cursor-pointer">
+//       {children}
+//     </div>
+//   )
+// }
 
 export default Footer

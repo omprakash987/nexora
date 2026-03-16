@@ -17,9 +17,9 @@ import ClientSlider from "./components/ClientSlider";
 
 function HomePage() {
   return (
-    <div className="overflow-auto">
+    <div className="overflow-hidden">
       <Hero />
-      <ClientSlider/> 
+      <ClientSlider />
       <BuildSection />
       <RevenueSection />
       <TechStackSection />
@@ -27,7 +27,7 @@ function HomePage() {
       <TestimonialsSection />
       <FaqSection />
       <CtaSection />
-   </div>
+    </div>
   );
 }
 
@@ -40,8 +40,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/web-development" element={<Webdevelopment />} />
         <Route path="/digital-marketing" element={<DigitalMarketing />} />
-         <Route path="/Ai-automation" element={<AiAutomation />} />
-          <Route path="/Branding-services" element={<BrandingServices />} />
+        <Route path="/Ai-automation" element={<AiAutomation />} />
+        <Route path="/Branding-services" element={<BrandingServices />} />
       </Routes>
 
       <Footer />

@@ -32,10 +32,14 @@ const Hero = () => {
     };
   }, []);
 
-  const spread = smoothProgress * 280;
-  const leftRotate = -5 - smoothProgress * 35;
-  const rightRotate = 5 + smoothProgress * 35;
-  const centerScale = 1 + smoothProgress * 0.08;
+  // responsive spread for mobile
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
+  const isTablet = typeof window !== "undefined" && window.innerWidth < 1024;
+
+  const spread = smoothProgress * (isMobile ? 80 : isTablet ? 160 : 280);
+
+  const leftRotate = -8 + smoothProgress * 12;
+  const rightRotate = 8 - smoothProgress * 12;
 
   return (
     <section className="px-4 sm:px-6 lg:px-8 mt-28 md:mt-32 lg:mt-36">
@@ -120,71 +124,57 @@ const Hero = () => {
               className="
               mt-16 sm:mt-20 md:mt-24 lg:mt-28
               relative
-              h-[320px] sm:h-[360px] md:h-[420px] lg:h-[420px]
+              h-[320px] sm:h-[360px] md:h-[420px]
               flex justify-center items-end"
             >
 
               {/* LEFT IMAGE */}
               <div
-                className="absolute"
+                className="absolute z-0 transform-gpu"
                 style={{
-                  transform: `
-                    translateX(-${spread}px)
-                    rotate(${leftRotate}deg)
-                  `,
+                  transform: `translateX(-${spread}px) rotate(${leftRotate}deg)`
                 }}
               >
-                {/*
                 <img
                   src="/om.jpeg"
                   className="
-                  w-40 sm:w-52 md:w-64 lg:w-72
-                  h-60 sm:h-72 md:h-88 lg:h-96
-                  object-cover rounded-3xl
-                  border-4 border-black shadow-2xl"
+  w-28 sm:w-40 md:w-64
+  h-40 sm:h-56 md:h-96
+  object-contain
+  rounded-2xl md:rounded-3xl
+  border-4 border-black shadow-2xl"
                 />
-                */}
               </div>
 
               {/* RIGHT IMAGE */}
               <div
-                className="absolute"
+                className="absolute z-0 transform-gpu"
                 style={{
-                  transform: `
-                    translateX(${spread}px)
-                    rotate(${rightRotate}deg)
-                  `,
+                  transform: `translateX(${spread}px) rotate(${rightRotate}deg)`
                 }}
               >
-                {/*
                 <img
                   src="/rishu.jpeg"
                   className="
-                  w-40 sm:w-52 md:w-64 lg:w-72
-                  h-60 sm:h-72 md:h-88 lg:h-96
-                  object-cover rounded-3xl
-                  border-4 border-black shadow-2xl"
+  w-28 sm:w-40 md:w-64
+  h-40 sm:h-56 md:h-96
+  object-contain
+  rounded-2xl md:rounded-3xl
+  border-4 border-black shadow-2xl"
                 />
-                */}
               </div>
 
               {/* CENTER IMAGE */}
-              <div
-                className="absolute z-10"
-                style={{
-                  transform: `scale(${centerScale})`,
-                }}
-              >
-                {/*
+              <div className="absolute z-10">
                 <img
                   src="/daksh2.jpeg"
                   className="
-                  w-48 sm:w-60 md:w-72 lg:w-80
-                  h-64 sm:h-80 md:h-96
-                  object-cover rounded-3xl
-                  border-4 border-black shadow-2xl"
+  w-32 sm:w-48 md:w-72
+  h-44 sm:h-64 md:h-96
+  object-contain
+  rounded-2xl md:rounded-3xl
+  border-4 border-black shadow-2xl"
                 />
-                */}
               </div>
 
             </div>

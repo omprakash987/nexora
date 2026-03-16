@@ -13,11 +13,13 @@ import Webdevelopment from "./pages/Webdevelopment";
 import DigitalMarketing from "./pages/Digital-marketing";
 import AiAutomation from "./pages/Ai-automation";
 import BrandingServices from "./pages/Brand-service";
+import ClientSlider from "./components/ClientSlider";
 
 function HomePage() {
   return (
     <div className="overflow-auto">
       <Hero />
+      <ClientSlider/> 
       <BuildSection />
       <RevenueSection />
       <TechStackSection />

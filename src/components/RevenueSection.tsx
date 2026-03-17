@@ -9,7 +9,7 @@ const cards = [
   },
 
   {
-    title: "Digital Marketing",
+    title: "Digital Marketing & Influencer Marketing",
     route: "/digital-marketing",
     desc: "Instagram Ads, Facebook Ads, Google Ads, Lead generation campaigns",
     img: "/digitalmarketing.jpg",

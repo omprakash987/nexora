@@ -33,7 +33,7 @@ const BuildSection = () => {
           w-32 sm:w-40 md:w-44 
           h-52 sm:h-64 md:h-72 
           rounded-2xl 
-          bg-gradient-to-b from-red-500 to-purple-600">
+          bg-linear-to-b from-red-500 to-purple-600">
           </div>
 
           {/* video container */}

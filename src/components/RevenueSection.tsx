@@ -26,7 +26,7 @@ const cards = [
     title: "AI Automation",
     route: "/ai-automation",
     desc: "Automate your business using AI",
-    img: "/ai.avif",
+    img: "/ai.jpg",
   },
 ];
 

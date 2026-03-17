@@ -1,10 +1,20 @@
 
 
 import { Resend } from "resend";
+import dotenv from 'dotenv'
 
-const resend = new Resend("re_Zp1pRoAS_7UmorTJZK6xJ22Li9rvCLkko"); 
+dotenv.config()
 
-const recepent = "kanuparewa371@gmail.com";
+
+const key = process.env.RESENDKEY
+
+if(!key){
+    throw new Error ("resend api key missing")
+}
+
+const resend = new Resend(key); 
+
+const recepent = process.env.RECEIPENTEMAIL;
 
 
 export const sendEmail = async(req , res)=>{

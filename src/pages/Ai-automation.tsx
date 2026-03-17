@@ -8,6 +8,7 @@ import {
   Zap,
 } from "lucide-react";
 import SendEmail from "../components/SendEmail";
+import { useEffect } from "react";
 
 interface AIService {
   id: number;
@@ -99,11 +100,16 @@ const metrics = [
 ];
 
 const AiAutomation = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-white text-slate-900 mt-10">
 
       {/* HERO */}
-      <section className="py-28 text-center bg-gradient-to-b from-indigo-50 to-white">
+      <section className="py-28 text-center bg-linear-to-b from-indigo-50 to-white">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

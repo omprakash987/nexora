@@ -14,6 +14,7 @@ import DigitalMarketing from "./pages/Digital-marketing";
 import AiAutomation from "./pages/Ai-automation";
 import BrandingServices from "./pages/Brand-service";
 import ClientSlider from "./components/ClientSlider";
+import ProjectsPage from "./components/ProjectShowcase";
 
 function HomePage() {
   return (
@@ -21,6 +22,7 @@ function HomePage() {
       <Hero />
       <ClientSlider />
       <BuildSection />
+      <ProjectsPage />
       <RevenueSection />
       <TechStackSection />
       <StatsSection />

@@ -5,26 +5,23 @@ type Project = {
     description: string;
     image: string;
     tech: string[];
+    liveUrl: string;
 };
 
 const projects: Project[] = [
     {
-        title: "E-commerce Website",
+        title: "Vishal interiro and exteriro",
         description: "Boosted sales by 35% with modern UI",
-        image: "/projects/ecom.jpg",
+        image: "/vishalinterior.png",
         tech: ["React", "Node", "MongoDB"],
+        liveUrl: "https://vishalinteriorandexterior.shop/",
     },
     {
-        title: "Portfolio Website",
-        description: "Personal brand with smooth animations",
-        image: "/projects/portfolio.jpg",
-        tech: ["Next.js", "Tailwind"],
-    },
-    {
-        title: "AI Chatbot",
-        description: "Automated customer queries",
-        image: "/projects/ai.jpg",
-        tech: ["Python", "OpenAI"],
+        title: "Muscleup24X7",
+        description: "Build the smoothly running e-com",
+        image: "/muscleup.png",
+        tech: ["React.js", "Tailwind","Stripe","mongodb"],
+        liveUrl: "https://ecom-ev1s.onrender.com/",
     },
 ];
 
@@ -44,15 +41,15 @@ const item = {
 
 const ProjectsPage = () => {
     return (
-        <div className="bg-white px-6 md:px-16 lg:px-24 py-12">
+        <div className="bg-white px-6 md:px-16 lg:px-24 py-16">
 
             {/* HERO */}
-            <div className="text-center mb-14">
+            <div className="text-center mb-16">
                 <h1 className="text-4xl font-bold text-orange-500">
                     Our Projects
                 </h1>
                 <p className="text-gray-600 mt-3">
-                    We build high-performance digital experiences
+                    Real work. Real impact.
                 </p>
             </div>
 
@@ -61,26 +58,26 @@ const ProjectsPage = () => {
                 variants={container}
                 initial="hidden"
                 animate="show"
-                className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
+                className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto"
             >
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
                         variants={item}
-                        whileHover={{ y: -8 }}
-                        className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group"
+                        whileHover={{ y: -6 }}
+                        className="relative bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition group"
                     >
                         {/* IMAGE */}
                         <div className="overflow-hidden">
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+                                className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                         </div>
 
                         {/* CONTENT */}
-                        <div className="p-5">
+                        <div className="p-6">
                             <h2 className="text-xl font-semibold text-gray-800">
                                 {project.title}
                             </h2>
@@ -103,27 +100,22 @@ const ProjectsPage = () => {
                         </div>
 
                         {/* HOVER OVERLAY */}
-                        <div className="absolute inset-0 bg-orange-500/90 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
-                            <button className="bg-white text-orange-500 px-4 py-2 rounded-lg font-medium">
-                                Live
-                            </button>
-                            <button className="border border-white text-white px-4 py-2 rounded-lg">
-                                Case Study
-                            </button>
+                        <div className="absolute inset-0 bg-orange-500/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            
+                            <a
+                                href={project.liveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-white text-orange-500 px-6 py-3 rounded-lg font-semibold hover:scale-105 transition"
+                            >
+                                View Live
+                            </a>
+
                         </div>
                     </motion.div>
                 ))}
             </motion.div>
 
-            {/* CTA */}
-            {/* <div className="text-center mt-20">
-                <h2 className="text-2xl font-semibold text-gray-800">
-                    Have a project in mind?
-                </h2>
-                <button className="mt-5 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition">
-                    Let’s Work Together
-                </button>
-            </div> */}
         </div>
     );
 };
